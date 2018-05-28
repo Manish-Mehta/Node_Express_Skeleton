@@ -2,7 +2,7 @@
 
 module.exports = {
     
-    'port': process.env.port || 5000,
+    'port': process.env.port || 8080,
     'database':'mongodb://127.0.0.1:27017/DbName',           // database connection link
     'superSecretCustomer':'Secret',                         // key for generating for customer api token
     'superSecretAdmin':'Secret' ,

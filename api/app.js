@@ -64,7 +64,7 @@ app.use(function(err, req, res, next){
     if(err.statusCode){
         res.status(err.statusCode || 500);
     }
-    res.send({"success": false, "message": err.message, "data": err});
+    res.send({"success": false, "message": err.message, "data": err})
 });
 
 //Starting point of app 
