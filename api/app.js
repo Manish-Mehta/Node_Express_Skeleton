@@ -5,7 +5,9 @@ const config = require('./config'),
  express = require('express'),
  morgan = require('morgan'),
  bluebird = require('bluebird'),
- compress = require('compression')
+ compress = require('compression'),
+ routes = require('./routes')
+
 
  /*
  fs = require('fs'),
@@ -54,7 +56,7 @@ process.on('uncaughtException', function(err) {
 app.options("*", function(req,res,next){res.send(200);});
 
 //API Route setup
-app.use('/','./api')
+app.use('/',routes)
 
 // Error handling middleware
 app.use(function(err, req, res, next){
